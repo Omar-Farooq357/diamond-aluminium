@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diamond Aluminium - Custom Fabrication</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .intro {
+      padding: 30px;
+      background-color: white;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      background: #eef2f3;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card h3 {
+      padding: 15px 10px 5px;
+      margin: 0;
+    }
+    .card p {
+      padding: 0 15px 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      background: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .stats-section h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .stat-card {
+      background: #ffffff; /* Same background as gallery */
+      border-radius: 12px;
+      padding: 25px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background-color: #ffffff; /* Adding white background */
+      border: 1px solid #ddd; /* Light border to separate */
+    }
+    .stat-card:hover {
+      transform: translateY(-6px);
+      background-color: #f4f7f9; /* Light background color on hover */
+    }
+    .stat-card img {
+      width: 64px;
+      margin-bottom: 15px;
+    }
+    .stat-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      color: #2980b9;
+    }
+    .stat-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Diamond Aluminium</h1>
+  <p>Custom Fabrication Services</p>
+</header>
+
+<section class="intro">
+  <h2>Precision. Strength. Innovation.</h2>
+  <p>Explore our custom aluminium fabrication services — built to match your vision with strength and elegance.</p>
+  <p style="max-width: 700px; margin: 20px auto; color: #444;">
+    Diamond Aluminium is a name trusted for excellence in custom fabrication. Known for transforming raw aluminium into architectural art, we are the first choice for those who value strength, precision, and flawless finishing. With a legacy of superior workmanship and innovation, we don’t just build — we elevate your space.
+  </p>
+</section>
+
+<section class="gallery">
+  <div class="card">
+    <img src="https://th.bing.com/th/id/OIP.v-JgrUQqtLf5Vhk5b-RNhwHaE8?w=282&h=188&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window Frames">
+    <h3>Window Frames</h3>
+    <p>Durable and stylish window frames tailored to your design needs.</p>
+  </div>
+  <div class="card">
+    <img src="https://th.bing.com/th/id/OIP.rGEMxivv0lsijl1a7i_PnwHaFi?w=260&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Partitions">
+    <h3>Office Partitions</h3>
+    <p>Modern aluminium partitions for clean and efficient workspace divisions.</p>
+  </div>
+  <div class="card">
+    <img src="https://unikneeds.com/wp-content/uploads/2019/07/aluminium-alloy-frame-double-tempered-glass-swing.jpg" alt="Panels">
+    <h3>Doors Frames</h3>
+    <p>Designed to fit any structure — strong, lightweight, and elegant.</p>
+  </div>
+</section>
+
+<section class="stats-section">
+  <h2>Trusted by Quality. Proven by Numbers.</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <img src="https://img.icons8.com/color/64/000000/factory.png" alt="Projects">
+      <h3>500+ Projects</h3>
+      <p>Successfully fabricated and delivered across industries.</p>
+    </div>
+    <div class="stat-card">
+      <img src="https://img.icons8.com/fluency/64/000000/calendar.png" alt="Years">
+      <h3>15+ Years Experience</h3>
+      <p>Masters of aluminium craftsmanship since 2009.</p>
+    </div>
+    <div class="stat-card">
+      <img src="https://img.icons8.com/color/64/000000/group-background-selected.png" alt="Clients">
+      <h3>1,000+ Happy Clients</h3>
+      <p>Residential, commercial, and industrial satisfaction worldwide.</p>
+    </div>
+    <div class="stat-card">
+      <img src="https://img.icons8.com/color/64/000000/trophy.png" alt="Top Choice">
+      <h3>Top Industry Choice</h3>
+      <p>Preferred by architects, builders, and designers for premium aluminium solutions.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
