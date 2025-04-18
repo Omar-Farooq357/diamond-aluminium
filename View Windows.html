@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .header {
+      background: url('https://th.bing.com/th/id/OIP.W4SMmp5EppkRguQzWnewxwHaE8?w=259&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .content {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .gallery-title {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .gallery-title h2 {
+      font-size: 32px;
+      color: #ffffff;
+    }
+
+    .slider {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto 50px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .slides-container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slides img {
+      width: calc(100% / 4); /* Show 4 at a time */
+      height: 300px;
+      object-fit: cover;
+      padding: 5px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease; /* Add transition for zoom effect */
+    }
+
+    /* Hover zoom effect for images */
+    .slides img:hover {
+      transform: scale(1.1); /* Slight zoom effect */
+      cursor: pointer;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .features {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .features strong {
+      color: #ffffff;
+    }
+
+    /* Hover effect for zoom and shine */
+    .features:hover {
+      transform: scale(1.05); /* Slight zoom effect */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Shine effect */
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 32px;
+        padding: 15px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+
+      .slides img {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        height: 200px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+        padding: 10px;
+      }
+
+      .content {
+        padding: 20px 10px;
+      }
+
+      .slides img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Aluminium Windows</h1>
+  </div>
+
+  <div class="content">
+    <p>
+      We proudly appreciate the exceptional craftsmanship of <strong>Diamond Aluminium</strong>. Their advanced window systems
+      combine aesthetics with high performance, ensuring both elegance and durability in modern architecture.
+      Trusted by thousands, their innovation continues to enhance building standards across the industry.
+    </p>
+  </div>
+
+  <!-- New Gallery Title -->
+  <div class="gallery-title">
+    <h2>Aluminium Windows - Photo Gallery</h2>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="slider">
+    <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slides-container">
+      <div class="slides" id="slides">
+        <img src="https://ts2.mm.bing.net/th?id=OIP._vvD2wst4YUK3c03nEoeSwHaFj&pid=15.1" alt="Window 1">
+        <img src="https://th.bing.com/th/id/OIP.ozdMjtdJ4iux--xg6FOYmwHaEH?w=237&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window 2">
+        <img src="https://th.bing.com/th/id/OIP.cK5z4KNrV94SFQKi-WzD6gHaE8?w=240&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window 3">
+        <img src="https://th.bing.com/th/id/OIP.lssGxYZzBSqVr_-xMVZYvwHaEK?w=260&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window 4">
+        <img src="https://th.bing.com/th/id/OIP.FCiGvtRBizXrmwmvZr1OWAHaE7?w=284&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window 5">
+        <img src="https://th.bing.com/th/id/OIP.nBabFFssDLVvDb-HyQNxLQHaE7?w=263&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Window 6">
+        <img src="https://ts3.mm.bing.net/th?id=OIP.BoFmLM4_6xnuOqzNLw0FGwHaLK&pid=15.1" alt="Window 7">
+        <img src="https://ts3.mm.bing.net/th?id=OIP.78Ly51qECfrqthetTa0qKgHaIo&pid=15.1" alt="Window 8">
+      </div>
+    </div>
+    <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <div class="features">
+    <h2>Key Features and Benefits</h2>
+    <ul>
+      <li><strong>Global Standards:</strong> Diamond Aluminium’s section windows are tested to top global standards like JIS, ASTM, and BS, ensuring superior performance in extreme weather and temperature variations.</li>
+      <li><strong>Usage-Optimized Design:</strong> Hardware and profiles are thoughtfully crafted for real-world usage without being over or under-designed.</li>
+      <li><strong>Performance-Tested:</strong> Each product is tested for resistance to wind, air, water, noise, and sound – perfect for all climates and conditions.</li>
+      <li><strong>Maximum Glass Coverage:</strong> Features narrow sightlines and expansive views thanks to a slim sash and large panels for wide visibility.</li>
+      <li><strong>Performance Uniformity:</strong> Designed to ensure consistent functionality across all environments—labs, factories, or homes.</li>
+      <li><strong>Pre-Engineered:</strong> Pre-manufactured in various sizes, enabling bulk orders with consistent, pristine quality delivered to your preferred site.</li>
+    </ul>
+  </div>
+
+  <!-- JavaScript for Slider Logic -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalImages = slides.children.length;
+    const imagesPerView = 4;
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > totalImages - imagesPerView) {
+        currentIndex = totalImages - imagesPerView;
+      }
+
+      const shiftPercentage = (100 / imagesPerView) * currentIndex;
+      slides.style.transform = `translateX(-${shiftPercentage}%)`;
+    }
+  </script>
+
+</body>
+</html>
+
+
