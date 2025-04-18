@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Service - Aluminium Work</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Animation */
+    .header {
+      background: #000 url('https://th.bing.com/th/id/OIP.RPJT-31E0TD7kmip8SAlWQHaEr?w=292&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7') center/cover no-repeat;
+      color: white;
+      padding: 60px;
+      text-align: center;
+      font-size: 2em;
+      opacity: 0;
+      animation: zoomIn 1s ease forwards;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .intro {
+      padding: 40px;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-text h2 {
+      margin-top: 0;
+    }
+
+    .services-section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .services-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .service-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-item img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .service-item p {
+      margin: 10px 0 0;
+      font-weight: bold;
+    }
+
+    /* Fade In on Scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating Animation for Images */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">OUR SERVICE</div>
+
+  <div class="intro fade-in">
+    <div class="intro-text">
+      <h2>Aluminium Fabrication Service</h2>
+      <p>
+        We offer all type services regarding Aluminium Fabrication. We also provide service with or without material to our valuable client. We do also repairing or renovate product to our clients regarding any kind of solution of aluminium or fabrication work. We are also involved in providing aluminium or glass partition if client needed.
+      </p>
+    </div>
+  </div>
+
+  <div class="services-section fade-in">
+    <h3>Service & Repair</h3>
+    <p>We can do all type of Aluminium Windows, Doors, Partitions Maintenance and Services.</p>
+
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="https://th.bing.com/th?q=Glazing+with+12+mm+Glass&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Structural Glazing Glass" />
+        <p>Structural Glazing Glass</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.hCZgq65U78C0AYtyM883XwHaFj?w=271&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Doors & Windows" />
+        <p>Doors & Windows</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.N_8xIRcYY4KdUh3BZmeAowHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Sliding Partition" />
+        <p>Sliding Partition</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.OVPZxAiTwpVLJwoNwP4cxgHaE8?w=272&h=176&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Sound Proof Window" />
+        <p>Sound Proof Window</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.Pr3ctXWL9qaSp8USovjcFAHaFj?w=256&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Glass Partition" />
+        <p>Glass Partition</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.aWcds-VNcoy_HA3uFGUy5wHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3" alt="Aluminium Fabrication" />
+        <p>Aluminium Fabrication</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.3IzqMDIQje6set9V1oIzjQHaE8?w=276&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Aluminium Cabinet" />
+        <p>Aluminium Cabinet</p>
+      </div>
+      <div class="service-item">
+        <img src="https://th.bing.com/th/id/OIP.KydS6NGAp7faECz_aPCUcAHaE6?w=259&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Partition" />
+        <p>Partition</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS for Scroll Fade-In -->
+  <script>
+    const fadeElems = document.querySelectorAll('.fade-in');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    fadeElems.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
+
+
+
