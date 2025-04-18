@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Aluminium</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .btn-animated {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-animated:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1.05);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-slide-up {
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+
+    .hero-image {
+      transition: transform 0.5s ease-in-out;
+    }
+    .hero-image:hover {
+      transform: scale(1.1);
+    }
+
+    .card-image {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card-image:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    header {
+      animation: slideDown 0.7s ease-out forwards;
+    }
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-animate {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.7s ease;
+    }
+    .product-animate.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .testimonial-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .testimonial-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 text-white z-50">
+    <div class="flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold">Diamond Aluminium</h1>
+      <nav class="space-x-6">
+        <a href="about Us/about Us.html" class="hover:text-pink-300">About</a>
+        <a href="#products" class="hover:text-pink-300">Products</a>
+        <a href="#why" class="hover:text-pink-300">Why Us</a>
+        <a href="#testimonials" class="hover:text-pink-300">Testimonials</a>
+        <a href="Contact Us/Contact Us.html" class="hover:text-pink-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-screen text-white relative" style="background-image: url('https://images.unsplash.com/photo-1607340031440-e7d773b19b97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-4 text-center">
+      <img src="https://th.bing.com/th/id/OIP.JjK6pNzjfCC0VwK9rn3MxQHaE8?w=229&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Hero image" class="w-100 h-auto mb-6 rounded shadow-lg hero-image">
+      <h1 class="text-4xl font-bold mb-4 opacity-0 fade-slide-up delay-100">Welcome to Diamond Aluminium</h1>
+      <p class="text-lg mb-6 max-w-xl opacity-0 fade-slide-up delay-200">Your premier destination for innovative aluminium solutions that combine elegance and strength.</p>
+      <a href="Contact Us/Contact Us.html" class="bg-pink-300 text-gray-900 px-6 py-2 rounded font-semibold btn-animated">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Three Cards Section -->
+  <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 py-20 bg-red-900 text-white">
+    <div class="text-center reveal">
+      <img src="https://th.bing.com/th/id/OIP.r96NrAgPRQNOHyYixzBxrwHaFj?w=259&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Legacy of Quality" class="w-50s h-auto mx-auto mb-4 card-image" />
+      <h2 class="text-xl font-semibold mb-2">A Legacy of Quality</h2>
+      <p class="mb-4">Since 2009, Diamond Aluminium has delivered high-quality products that exceed expectations.</p>
+      <a href="about Us/about Us.html" class="bg-pink-300 text-gray-900 px-4 py-2 inline-block rounded font-semibold btn-animated">About Us</a>
+    </div>
+    <div class="text-center reveal">
+      <img src="https://th.bing.com/th/id/OIP.H90GnrZWkxlJ3E5tL7xCrwHaE1?w=256&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Innovative Designs" class="w-90s h-auto mx-auto mb-4 card-image" />
+      <h2 class="text-xl font-semibold mb-2">Innovative Designs</h2>
+      <p class="mb-4">We explore the latest aluminium trends to create stunning and practical systems.</p>
+      <a href="our services/our services.html" class="bg-pink-300 text-gray-900 px-4 py-2 inline-block rounded font-semibold btn-animated">Our Services</a>
+    </div>
+    <div class="text-center reveal">
+      <img src="https://th.bing.com/th/id/OIP.AwL2ptnVtKrdh0CH_p5fKQHaEq?w=304&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Customer Approach" class="mx-auto mb-4 card-image" />
+      <h2 class="text-xl font-semibold mb-2">Customer-Centric Approach</h2>
+      <p class="mb-4">Solutions tailored to each client’s specific needs for maximum satisfaction.</p>
+      <a href="Contact Us/Contact Us.html" class="bg-pink-300 text-gray-900 px-4 py-2 inline-block rounded font-semibold btn-animated">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+   <!--product 1-->
+  <section id="products" class="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 py-20">
+    <div class="relative h-64 text-white rounded-lg overflow-hidden bg-cover bg-center flex items-center justify-center product-animate" style="background-image: url('https://img.pikbest.com/wp/202343/brushed-metal-texture-aesthetic-backdrop-featuring-a_9986564.jpg!f305cw');">
+      <div class="bg-black bg-opacity-60 w-full h-full p-6 flex flex-col justify-center items-center text-center">
+        <h2 class="text-2xl font-semibold mb-2">Advanced Window Systems</h2>
+        <p class="mb-4">Engineered for performance, ideal for any building.</p>
+        <a href="View Windows/View Windows.html" class="bg-pink-300 text-gray-900 px-4 py-2 rounded font-semibold btn-animated">View Windows</a>
+      </div>
+    </div>
+    <!--product 2-->
+    <div class="relative h-64 text-white rounded-lg overflow-hidden bg-cover bg-center flex items-center justify-center product-animate" style="background-image: url('https://th.bing.com/th/id/OIP.dN93g_UZ3W4XW9bFmT_b2gHaEJ?w=302&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');">
+      <div class="bg-black bg-opacity-60 w-full h-full p-6 flex flex-col justify-center items-center text-center">
+        <h2 class="text-2xl font-semibold mb-2">Durable Door Solutions</h2>
+        <p class="mb-4">Style and security for residential & commercial spaces.</p>
+        <a href="Explore Doors/Explore Doors.html" class="bg-pink-300 text-gray-900 px-4 py-2 rounded font-semibold btn-animated">Explore Doors</a>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="relative h-64 text-white rounded-lg overflow-hidden bg-cover bg-center flex items-center justify-center" style="background-image: url('https://img.freepik.com/premium-photo/shiny-fluid-silver-wavy-background_95264-207.jpg?w=2000');">
+      <div class="bg-black bg-opacity-60 w-full h-full p-6 flex flex-col justify-center items-center text-center">
+        <h2 class="text-2xl font-semibold mb-2">Architectural Aluminium</h2>
+        <p class="mb-4">Enhance the beauty and functionality of buildings.</p>
+        <a href="Architect/Architect.html" class="bg-pink-300 text-gray-900 px-4 py-2 rounded font-semibold btn-animated">See Architectural Solutions</a>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="relative h-64 text-white rounded-lg overflow-hidden bg-cover bg-center flex items-center justify-center" style="background-image: url('https://www.closedlooppartners.com/wp-content/uploads/2023/11/e00e45_d406fd9e9a1c44c2b2295f3ec6688051mv2-736x492.webp');">
+      <div class="bg-black bg-opacity-60 w-full h-full p-6 flex flex-col justify-center items-center text-center">
+        <h2 class="text-2xl font-semibold mb-2">Custom Fabrication</h2>
+        <p class="mb-4">Tailored aluminium solutions to your exact needs.</p>
+        <a href="Custom Fabrication/Custom Fabrication.html" class="bg-pink-300 text-gray-900 px-4 py-2 rounded font-semibold btn-animated">Get Custom Solutions</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Add similar product-animate to the next 2 cards -->
+
+  <section id="why" class="px-6 py-20 text-center bg-gray-50">
+    <h2 class="text-3xl font-bold mb-4 text-gray-800">Why Diamond Aluminium?</h2>
+    <p class="text-pink-500 mb-12">Explore the advantages that set us apart in the aluminium industry.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-6xl mx-auto">
+      <div class="p-6 rounded-2xl shadow-lg bg-red-100 hover:bg-red-200 reveal">
+        <h3 class="font-semibold text-xl text-gray-800 mb-2">Quality Assurance</h3>
+        <p class="text-gray-700">Built to last with high standards in manufacturing.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-lg bg-yellow-100 hover:bg-yellow-200 reveal">
+        <h3 class="font-semibold text-xl text-gray-800 mb-2">Energy Efficiency</h3>
+        <p class="text-gray-700">Save on utility bills with eco-friendly designs.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-lg bg-green-100 hover:bg-green-200 reveal">
+        <h3 class="font-semibold text-xl text-gray-800 mb-2">Expert Craftsmanship</h3>
+        <p class="text-gray-700">Precision techniques for functional and appealing systems.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-lg bg-blue-100 hover:bg-blue-200 reveal">
+        <h3 class="font-semibold text-xl text-gray-800 mb-2">Comprehensive Support</h3>
+        <p class="text-gray-700">From consultation to post-installation, we’ve got you covered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="bg-red-900 text-white px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-2">What Our Clients Say</h2>
+    <p class="mb-8">Discover how we've made a difference for our customers.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="testimonial-animate">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1" class="mx-auto rounded-full mb-4 w-24 h-24" />
+        <h3 class="font-semibold mb-2">Exceptional Quality</h3>
+        <p class="mb-4">The quality of the windows transformed our home beautifully.</p>
+      </div>
+      <div class="testimonial-animate">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2" class="mx-auto rounded-full mb-4 w-24 h-24" />
+        <h3 class="font-semibold mb-2">Outstanding Service</h3>
+        <p class="mb-4">Professional, responsive, and highly recommended.</p>
+      </div>
+      <div class="testimonial-animate">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3" class="mx-auto rounded-full mb-4 w-24 h-24" />
+        <h3 class="font-semibold mb-2">Timely Delivery</h3>
+        <p class="mb-4">Quick delivery without compromising on quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-gray-100 py-6 text-center text-gray-500">
+    <p>&copy;2025 - Diamond Aluminium. Built with dedication and care.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const products = document.querySelectorAll('.product-animate');
+      const testimonials = document.querySelectorAll('.testimonial-animate');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(el => observer.observe(el));
+      products.forEach(el => observer.observe(el));
+      testimonials.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
